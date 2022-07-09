@@ -1,4 +1,4 @@
-// ITERATION 1
+// ITERATION 1/2/3
 
 function updateSubtotal(product) {
   const price = product.querySelector('.price span').textContent;
