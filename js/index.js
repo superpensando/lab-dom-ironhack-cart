@@ -28,6 +28,7 @@ function removeProduct(event) {
   const parentTarget=target.parentNode;
   const parentTarget2=parentTarget.parentNode;
   parentTarget2.remove();
+  calculateAll();
 }
 
 // ITERATION 5
