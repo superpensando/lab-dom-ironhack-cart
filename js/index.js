@@ -71,19 +71,6 @@ function createProduct() {
   newSubstructurePrice.textContent = "30$"
   newProductPrice.appendChild(newSubstructurePrice);
 
-
- //document.querySelector(".product .new-product").classList.remove("new-product");
-
-
- 
-
- 
-  /*const copyProduct=document.querySelector(".product").innerHTML;
-  console.log(copyProduct);
-  const newProduct=product.appendChild(copyProduct);
-  console.log(newProduct);*/
-
-
 }
 
 window.addEventListener('load', () => {
