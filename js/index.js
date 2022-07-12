@@ -34,10 +34,64 @@ function removeProduct(event) {
 // ITERATION 5
 
 function createProduct() {
-  //... your code goes here
+  const createProduct=document.querySelector(".create-product");
+  const productName=document.querySelector('#product-name').value;
+  const quantity=document.querySelector('#quantity-number').value;
+
+  
+  const productParent=document.querySelector("#cart tbody");
+  const newProductTr=document.createElement("tr");
+  newProductTr.classList.add("product");
+  newProductTr.classList.add("new-product");
+  productParent.appendChild(newProductTr);
+
+  const newProduct=document.querySelector(".new-product");
+  const productCopy=document.querySelector(".product");
+  const productChilds=productCopy.childNodes;
+
+  let i=0; 
+  for(child in productChilds){
+    if (productChilds[child].nodeName === "TD"){
+      let newStructure = document.createElement("td");
+      newStructure.classList.add(productChilds[child].className);
+      newProduct.appendChild(newStructure);
+    }
+
+  }
+
+  
+  const newProductName=document.querySelector(".new-product .name"); 
+  const newSubstructureName=document.createElement("span");
+  newSubstructureName.textContent = productName;
+  newProductName.appendChild(newSubstructureName);
+
+
+  const newProductPrice=document.querySelector(".new-product .price"); 
+  const newSubstructurePrice=document.createElement("span");
+  newSubstructurePrice.textContent = "30$"
+  newProductPrice.appendChild(newSubstructurePrice);
+
+
+ //document.querySelector(".product .new-product").classList.remove("new-product");
+
+
+ 
+
+ 
+  /*const copyProduct=document.querySelector(".product").innerHTML;
+  console.log(copyProduct);
+  const newProduct=product.appendChild(copyProduct);
+  console.log(newProduct);*/
+
+
 }
 
 window.addEventListener('load', () => {
   const calculatePricesBtn = document.getElementById('calculate');
   calculatePricesBtn.addEventListener('click', calculateAll);
+
+  const createBtn = document.getElementById('create');
+  createBtn.addEventListener('click', createProduct);
+
+
 });

@@ -59,6 +59,9 @@ table input[type='number'] {
 .btn-remove {
   background-color: #f27471;
 }
+.btn-create {
+  background-color: #fff;
+}
 
 h1,
 h2,
