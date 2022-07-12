@@ -71,6 +71,8 @@ function createProduct() {
   newSubstructurePrice.textContent = "30$"
   newProductPrice.appendChild(newSubstructurePrice);
 
+  // Y así se harían los demás... TODO optimizar el código para no escribir tanto
+
 }
 
 window.addEventListener('load', () => {
